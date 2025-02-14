@@ -29,14 +29,18 @@ const CustomerDashboard = () => {
   }, []);
 
   const fetchUserTickets = async (userId) => {
-    const ticketsRef = collection(db, 'tickets');
-    const q = query(ticketsRef, where('userId', '==', userId));
-    const querySnapshot = await getDocs(q);
-    const ticketsList = querySnapshot.docs.map(doc => ({
-      id: doc.id,
-      ...doc.data()
-    }));
-    setTickets(ticketsList);
+    try {
+      const ticketsRef = collection(db, 'tickets');
+      const q = query(ticketsRef, where('userId', '==', userId));
+      const querySnapshot = await getDocs(q);
+      const ticketsList = querySnapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      }));
+      setTickets(ticketsList);
+    } catch (error) {
+      setError('Failed to fetch tickets: ' + error.message);
+    }
   };
 
   const handleInputChange = (e) => {

@@ -35,20 +35,20 @@ const Sidebar = ({ isAgent }) => {
 
       {/* Sidebar */}
       <div className={`
-        fixed inset-y-0 left-0 z-40 w-64 bg-gradient-to-b from-green-600 to-white text-white transform transition-transform duration-300 ease-in-out
+        fixed inset-y-0 left-0 z-40 w-64 bg-gradient-to-b from-green-600 to-white transform transition-transform duration-300 ease-in-out
         ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}
         md:translate-x-0
       `}>
         <div className="p-6">
-          <h2 className="text-2xl font-bold mb-8">
+          <h2 className="text-2xl font-bold mb-8 text-white">
             {isAgent ? 'Agent Portal' : 'Customer Portal'}
           </h2>
           <nav className="space-y-4">
             {isAgent ? (
               <button
                 onClick={() => navigate('/agent-dashboard')}
-                className={`w-full text-left px-4 py-3 rounded-lg hover:bg-blue-700 transition-colors ${
-                  isActiveRoute('/agent-dashboard')
+                className={`w-full text-left px-4 py-3 rounded-lg text-white hover:bg-green-700 transition-colors ${
+                  isActiveRoute('/agent-dashboard') ? 'bg-green-700' : ''
                 }`}
               >
                 Tickets
@@ -56,8 +56,8 @@ const Sidebar = ({ isAgent }) => {
             ) : (
               <button
                 onClick={() => navigate('/customer-dashboard')}
-                className={`w-full text-left px-4 py-3 rounded-lg hover:bg-blue-700 transition-colors ${
-                  isActiveRoute('/customer-dashboard')
+                className={`w-full text-left px-4 py-3 rounded-lg text-white hover:bg-green-700 transition-colors ${
+                  isActiveRoute('/customer-dashboard') ? 'bg-green-700' : ''
                 }`}
               >
                 Dashboard
@@ -65,7 +65,7 @@ const Sidebar = ({ isAgent }) => {
             )}
             <button
               onClick={handleLogout}
-              className="w-full text-left px-4 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              className="w-full text-left px-4 py-3 rounded-lg text-white hover:bg-green-700 transition-colors"
             >
               Logout
             </button>
