@@ -26,7 +26,8 @@ const Login = () => {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-600 to-white py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-600 to-white py-12 px-4 sm:px-6 lg:px-8 gap-10">
+      
       <div className="max-w-md w-full space-y-8 glass-effect p-8 rounded-xl shadow-2xl animate-fadeIn">
         <div>
           <h1 className="text-4xl font-bold text-center text-gray-800 mb-2">Welcome Back</h1>
@@ -109,6 +110,15 @@ const Login = () => {
             </button>
           </div>
         </form>
+      </div>
+      <div className='bg-white p-6 rounded-2xl w-80'>
+        <b>Login credentials :</b>
+        <br/>
+        <h1>1. Agent Login : </h1>
+        <h2>email - agent@support.com Password - agent123</h2>
+        <br/>
+        <h1>2. Customer Login : </h1>
+        <h2>email - customer@support.com Password - customer123</h2>
       </div>
     </div>
   )
