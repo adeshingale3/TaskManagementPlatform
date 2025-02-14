@@ -113,7 +113,7 @@ const Login = () => {
       </div>
 
       <div className="w-full max-w-sm lg:max-w-md bg-white p-4 lg:p-6 rounded-xl shadow-lg order-1 lg:order-2 mb-6 lg:mb-0">
-        <h3 className="text-lg lg:text-xl font-bold text-gray-800 mb-4">Login Credentials</h3>
+        <h3 className="text-lg lg:text-xl font-bold text-gray-800 mb-4">Login Credentials to Test</h3>
         <div className="space-y-4">
           <div className="p-3 lg:p-4 bg-gray-50 rounded-lg">
             <h4 className="font-semibold text-sm lg:text-base text-gray-700">Agent Login</h4>
